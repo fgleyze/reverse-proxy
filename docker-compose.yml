@@ -1,5 +1,4 @@
 # docker-compose.yml (pour votre Nginx Reverse Proxy principal)
-version: '3.8'
 
 services:
   nginx:
@@ -36,5 +35,5 @@ services:
 
 networks:
   default: # Ce 'default' est le nom interne à ce docker-compose pour le réseau externe 'gleyze'
-    external:
-      name: gleyze # Assure la connexion au réseau externe nommé 'gleyze'
+    name: gleyze # Assure la connexion au réseau externe nommé 'gleyze'
+    external: true
